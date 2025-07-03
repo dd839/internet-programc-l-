@@ -1,4 +1,4 @@
-# internet-programc-l-
+# internet-programciligi
 # Haber Portalı Projesi
 
 Bu proje, Next.js kullanılarak geliştirilmiş bir haber portalı web sitesidir.
