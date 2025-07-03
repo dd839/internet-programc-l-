@@ -52,3 +52,17 @@ Ardından aşağıdaki komutu çalıştırın:
 npm install
 
 Bu komut, package.json dosyasında belirtilen tüm bağımlılıkları yükleyecektir.
+
+ADIM 4: Veritabanının Oluşturulması
+Aşağıdaki komutu çalıştırarak veritabanını oluşturun:
+npx prisma migrate dev
+Komut çalıştırıldığında migration için bir isim girmeniz istenebilir, herhangi bir isim girebilirsiniz
+(örneğin "initial").
+ADIM 5: Projeyi Çalıştırma
+Aşağıdaki komutu çalıştırarak geliştirme sunucusunu başlatın:
+npm run dev
+Tarayıcınızda http://localhost:3000 adresine giderek projeyi görüntüleyebilirsiniz.
+ADIM 6: Admin Girişi
+Admin paneline erişmek için:
+E-posta: admin@example.com
+Şifre: admin123
