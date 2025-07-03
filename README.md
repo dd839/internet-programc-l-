@@ -34,11 +34,6 @@ npm run dev
 4. Tarayıcınızda http://localhost:3000 adresine gidin.
 5. HABER PORTALI PROJESİ KURULUM ADIMLARI
 =====================================
-
-Değerli Hocam,
-
-Bu dosya, haber portalı projesini nasıl kurup çalıştıracağınızı adım adım açıklamaktadır.
-
 ADIM 1: Node.js Kurulumu
 -----------------------
 Eğer bilgisayarınızda Node.js kurulu değilse, https://nodejs.org adresinden indirip kurmanız gerekiyor.
