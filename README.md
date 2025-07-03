@@ -5,92 +5,28 @@ Dudidem Zehra Yüksekkolaşin
 Öğrenci no: 22480717
 Tc: 10493451760
 
+Projenin Amacı
+Bu proje, güncel haberlerin paylaşılabileceği, kullanıcıların yorum yapabileceği ve birbirleriyle mesajlaşabileceği modern bir haber portalı web uygulaması olarak geliştirilmiştir. Proje, günümüz web teknolojilerini kullanarak hızlı, güvenli ve kullanıcı dostu bir haber platformu sunmayı amaçlamaktadır.
 
-Günümüzde bilgiye hızlı, güvenilir ve kolay erişim büyük önem taşımaktadır. Dijitalleşmenin hızla arttığı bu çağda, kullanıcıların güncel haberlere anında ulaşabileceği platformlara olan ihtiyaç da her geçen gün artmaktadır. Bu ihtiyaca yönelik olarak geliştirdiğimiz Haber Portalı, kullanıcı dostu bir arayüzle, farklı kategorilerdeki haberleri tek bir platformda toplayan dinamik ve etkileşimli bir web uygulamasıdır.
+Proje, aşağıdaki problemlere çözüm sunmaktadır:
+Haber Erişimi: Kullanıcıların güncel haberlere kategorilere göre kolayca erişebilmesi
+Etkileşim: Kullanıcıların haberler hakkında yorum yapabilmesi ve tartışabilmesi
+İletişim: Kullanıcılar arası doğrudan mesajlaşma imkanı
+İçerik Yönetimi: Admin kullanıcıların içerikleri kolayca yönetebilmesi
+Rol Tabanlı Erişim: Farklı kullanıcı rollerine göre özelleştirilmiş erişim kontrolü
+Genel İşleyiş
+Sistem, rol tabanlı bir erişim kontrolü ile çalışmaktadır:
+Ziyaretçiler: Kayıt olmadan haberleri görüntüleyebilir
+Normal Kullanıcılar: Haberlere yorum yapabilir, diğer kullanıcılarla mesajlaşabilir ve kendi profillerini düzenleyebilir
+Admin Kullanıcılar: Haberleri ekleyebilir/düzenleyebilir/silebilir, kategorileri yönetebilir, kullanıcıları yönetebilir ve sistem istatistiklerini görüntüleyebilir
 
-Bu proje, “İnternet Programcılığı” dersi kapsamında gerçekleştirilmiştir. Temel hedefimiz, kullanıcıların güncel haberleri okuyabileceği, yönetici paneli sayesinde içeriklerin kolayca eklenip düzenlenebileceği bir sistem oluşturmaktır.
-
-Projemizin Başlıca Özellikleri:
-	•	Güncel haberlerin listelenmesi (Teknoloji, Spor, Ekonomi, Sağlık vb.)
-	•	Haber detay sayfası ile haber içeriklerinin okunması
-	•	Yönetici paneli ile haber ekleme, silme ve düzenleme işlemleri
-	•	Kategori bazlı filtreleme
-	•	Modern ve mobil uyumlu tasarım
-	•	Kullanıcı deneyimi odaklı yapı
-Bu proje, Next.js kullanılarak geliştirilmiş bir haber portalı web sitesidir.
-Planlama ve Geliştirme Süreci
-
-Proje bireysel olarak yürütülmüştür. Geliştirme süreci aşağıdaki aşamalardan oluşmuştur:
-	•	Araştırma ve Planlama: Kullanıcı rolleri, veri modeli ve temel ihtiyaçlar belirlendi.
-	•	Kurulum: Next.js, Tailwind CSS, Prisma ve SQLite ile proje iskeleti oluşturuldu.
-	•	Veritabanı Tasarımı: 5 ilişkili tablo planlandı ve Prisma ile şeması yazıldı.
-	•	Kullanıcı İşlemleri: Kayıt, giriş, profil görüntüleme ve güncelleme modülleri geliştirildi.
-	•	Yetkilendirme: Admin ve kullanıcı rolleri belirlendi, middleware ile koruma eklendi.
-	•	İçerik Yönetimi: Haber paylaşımı, kategori sistemi ve admin haber onayı eklendi.
-	•	Mesajlaşma: Kullanıcılar arası metin mesajlaşma sistemi geliştirildi.
-	•	Test ve Hata Ayıklama: İşlevlerin çalışırlığı kontrol edildi, hatalar giderildi.
-
-Modüller ve İşlevleri
-Modül	Açıklama
-Kullanıcı Yönetimi	Kayıt, giriş, çıkış, profil güncelleme işlemleri
-Admin Paneli	Kullanıcıları listeleme, silme, rol değiştirme, haber onayı, kategori yönetimi
-Haber Sistemi	Kullanıcıların haber eklemesi, haberlerin admin tarafından onaylanması
-Kategori Yönetimi	Admin’in haber kategorilerini tanımlaması
-Mesajlaşma	Kullanıcıların birbirine metin mesajı gönderebilmesi
-
-Kodlama Yapısı
-
-Teknolojiler:
-	•	Frontend & Backend: Next.js (App Router)
-	•	Veritabanı: SQLite
-	•	ORM: Prisma
-	•	Stil: Tailwind CSS
-
-Klasör Yapısı (Özet):
-
-/app
-  /api
-    /auth → login, register
-    /admin → kullanıcı işlemleri
-    /messages → mesajlaşma API
-  /profile
-  /news
-  /categories
-
-/lib
-  prisma.ts → Prisma Client
-
-/prisma
-  schema.prisma → Veritabanı şeması
-
-/styles
-  globals.css
-
-Kazanımlar ve Değerlendirme
-
-Bu projede şunlar öğrenilmiştir:
-	•	Next.js App Router yapısı ve API route oluşturma
-	•	Prisma ile ilişkisel veritabanı tasarımı ve veri sorgulama
-	•	Orta düzey kullanıcı yetkilendirme sistemleri (middleware ile)
-	•	CRUD işlemlerinin güvenli ve yapısal biçimde nasıl geliştirileceği
-	•	Arayüzde Tailwind CSS ile sade ve tutarlı tasarım geliştirme
-
-Bileşenlerin Genel İşleyişi (Teknik Özet)
-	•	Register & Login: bcrypt ile şifrelenmiş kullanıcı kaydı, JWT ile session kontrolü
-	•	Middleware: Admin kontrolü için özel middleware yazıldı (isAdmin)
-	•	Profil Sayfası: /profile altında kullanıcı bilgileri görüntülenebilir ve güncellenebilir
-	•	Admin Paneli: /admin altında kullanıcı yönetimi, haber onayı ve kategori işlemleri yapılabilir
-	•	Mesajlaşma: /messages API üzerinden POST/GET istekleriyle mesajlar gönderilir ve görüntülenir
-	•	Veritabanı: 5 tablo (User, Profile, Message, News, Category) birbirine ilişkili şekilde tanımlanmıştır.
-
-## Özellikler
-
-- Kullanıcı kaydı ve girişi
-- Rol tabanlı erişim kontrolü (admin/normal kullanıcı)
-- Haber yönetimi (ekleme, düzenleme, silme)
-- Kategori yönetimi
-- Yorum sistemi
-- Kullanıcılar arası mesajlaşma
+Kullanılan Teknolojiler
+Next.js 14: React tabanlı modern web framework
+Prisma ORM: Tip güvenli veritabanı işlemleri için
+SQLite: Hafif, dosya tabanlı veritabanı
+TailwindCSS: Hızlı ve responsive tasarım için
+NextAuth.js: Kimlik doğrulama ve oturum yönetimi
+Rapor, ZIP dosyasına eklenmiştir ve hocanız için detaylı bilgileri içermektedir.
 
 ## Teknolojiler
 
